@@ -1,0 +1,20 @@
+enable
+configure terminal
+!
+hostname SW1
+!
+no ip domain-lookup
+!
+interface range Gi0/2 - 3
+ shutdown
+interface range Gi1/0 - 3
+ shutdown
+!
+line con 0
+ exec-timeout 0 0
+line vty 0 4
+ no login
+line vty 5 15
+ login
+!
+end
