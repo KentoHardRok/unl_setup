@@ -1,0 +1,5 @@
+set system root-authentication plain-text-password  
+set system syslog user * any emergency
+set system syslog user * match "!(.*Scheduler Oinker*.|.*Frame0*.|.*ms without yield
+ing*.)"
+delete chassis auto-upgrade
